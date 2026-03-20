@@ -1,0 +1,10 @@
+Andrej is currently Senior Director of AI at Tesla, and was formerly a Reasearch Scientist at OpenAI.
+His educational materials about deep learning remain among the most popular.
+https://gaussian37.github.io/autodrive-concept-ai_for_full_self_driving_at_tesla/(링크)
+<실제 Andrej karpathy githup 내용>
+The MIT License (MIT) Copyright (c) 2020 Andrej Karpathy
+**micrograd** A tiny Autograd engine. Implements backpropagation over a dynamically built DAG and a small
+neural networks library on top of it with a Pytorch-like API.
+-The notebook demo.ipynb provides a full demo of training an 2-layer neural network(MLP)binary classifier.
+This is achieved by initializing a neural net from micrograd.nn module, implementing a simple svm "max-margin"binary
+classification loss and using SGD for optimization.
