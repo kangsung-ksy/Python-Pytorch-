@@ -1,0 +1,10 @@
+Q 성능지표(Performance Metrics)를 정의해야 하는데 어떻게 할까??
+--Average Sojourn Time(평균체류시간) : 수하물이 투입되어 목적지까지 도착하는데 걸리는 총시간
+--Troughput(처리량) : 단위 시간당 목적지에 도달한 수하물의 수 / Queue Length Variance : 각 노드 간 대기열 차이의 표준편차. 이 수치가 낮을수록 부하분산이 잘 된 것입니다
+--Maximum Latency : 병목 구간에서 가장 오래 머문 수하물의 시간 / System stability : 무작위 병목발생 후 시스템이 다시 정상상태로 복구되는데 걸리는 시간
+
+<제안하는 5가지 Load Balancing Algorithm>
+1) Round Roubin : 상태와 관계없이 순차적으로 분배  2)Join the Shortese Queue(JSQ) : 현재 대기열이 가장 짧은 경로 선택
+3) Minimum Workload(MW) : 대기열 길이 뿐만 아니라 컨베이어의 속도와 잔여거리를 계산하여 '도착예정시간'이 가장 짧은 곳 선택
+4) weighted Least Connections : 병목이 빈번한 구간에 가중치를 부여하여 부하를 사전차단 
+5) Adaptive Dynamic Routing : 병목 발생시 인접노드에 신호를 보내 경로를 실시간 재계산(Dijkstra기반 가중치 업데이트)
